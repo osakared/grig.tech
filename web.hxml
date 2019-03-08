@@ -1,0 +1,10 @@
+-lib coconut.react
+# -lib coconut.react-dom
+-lib hxnodejs
+-cp src
+-main Render
+-D closure_overwrite
+-D closure_advanced
+--macro includeFile('include/jsdom.js')
+-js bin/web.js
+-cmd node bin/web.js

@@ -1,0 +1,17 @@
+{
+  "name": "grig.osakared.io",
+  "version": "1.0.0",
+  "description": "Documentation for haxe grig",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thomasjwebb",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^13.2.0",
+    "lix": "^15.3.5",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
