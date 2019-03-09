@@ -1,5 +1,4 @@
 -lib coconut.react
-# -lib coconut.react-dom
 -lib hxnodejs
 -cp src
 -main Render

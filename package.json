@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "jsdom": "^13.2.0",
+    "less": "^3.9.0",
     "lix": "^15.3.5",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
