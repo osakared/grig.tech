@@ -14,6 +14,6 @@ class Sidebar extends coconut.ui.View
         top: "0px",
         width: "230px"
         }}>
-      ${...children}
+        ${...children}
     </div>';
 }

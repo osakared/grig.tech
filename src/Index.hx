@@ -22,6 +22,7 @@ class Index extends coconut.ui.View
                 <Page>
                     <Main>
                         <Title id="introduction" title="Introduction" />
+                        <CodeBlock />
                         <SectionBlock>
                             <a href="https://gitter.im/haxe-grig/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank">
                                 <img src="https://badges.gitter.im/haxe-grig/Lobby.svg" data-origin="https://badges.gitter.im/haxe-grig/Lobby.svg" /> 
@@ -44,7 +45,7 @@ class Index extends coconut.ui.View
                                 different environments (see below). This means that it should be possible to run the same audio code on multiple different
                                 environments, ranging from standalone compiled applications, to the browser, to plugins.
                             </p>
-                            <p>See the <a href="https://haxe-grig.gitlab.io/grig/api/" target="_blank">api documentation</a>.</p>
+                            <p>See the <a href="api/" target="_blank">api documentation</a>.</p>
                             <img src="grig-logo.png" style="float:right;" />
                             <p>Hardware Capabilities:</p>
                             <table>
@@ -147,6 +148,7 @@ class Index extends coconut.ui.View
                                 Instead, to use the latest version from git, clone the repo, then modify the appropriate files under haxe_modules to point to
                                 that directory as detailed in the lix documentation.
                             </p>
+                            <pre>lix install haxelib:grig.midi</pre>
                             <p>Copyright © 2019 Osaka Red LLC, redistributable per the terms of the CC Attribution 4.0 license.</p>
                         </SectionBlock>
                     </Main>
