@@ -1,15 +1,18 @@
 package;
 
-class SidebarTitle extends coconut.ui.View
-{
-    @:attribute var children:coconut.ui.Children;
+import react.ReactMacro.jsx;
 
-    function render() '<h1 style={{
-        color: "white",
-        fontSize: "20px",
-        padding: "1rem",
-        textAlign: "center"
-        }}>
-      ${...children}
-    </h1>';
+class SidebarTitle extends react.ReactComponent
+{
+    override function render()
+    {
+        return jsx('<h1 style={{
+            color: "white",
+            fontSize: "20px",
+            padding: "1rem",
+            textAlign: "center"
+            }}>
+            ${props.children}
+            </h1>');
+    }
 }

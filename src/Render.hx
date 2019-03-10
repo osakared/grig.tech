@@ -1,7 +1,7 @@
 package;
 
-import coconut.Ui.hxx;
 import haxe.io.Path;
+import react.ReactMacro.jsx;
 import sys.io.File;
 import sys.FileSystem;
 
@@ -35,7 +35,7 @@ class Render
 
         File.saveContent(Path.join([distDir, 'index.html']),
                 '<!DOCTYPE html><html lang="en"><body style="height: 100%;margin: 0;padding: 0;"><head><meta charSet="utf-8"/></head>' +
-                react.DOMServer.renderToStaticMarkup(hxx('<Index />')) +
+                react.DOMServer.renderToStaticMarkup(jsx('<Index />')) +
                 '</body></html>');
     }
 }

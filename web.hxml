@@ -1,9 +1,8 @@
--lib coconut.react
+-lib react
 -lib hxnodejs
 -cp src
 -main Render
--D closure_overwrite
--D closure_advanced
+-D react_global
 --macro includeFile('include/jsdom.js')
 -js bin/web.js
 -cmd node bin/web.js

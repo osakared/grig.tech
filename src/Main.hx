@@ -1,14 +1,17 @@
 package;
 
-class Main extends coconut.ui.View
-{
-    @:attribute var children:coconut.ui.Children;
+import react.ReactMacro.jsx;
 
-    function render() '<div style={{
-        display: "block",
-        position: "relative",
-        zIndex: "30"
-        }}>
-      ${...children}
-    </div>';
+class Main extends react.ReactComponent
+{
+    override function render()
+    {
+        return jsx('<div style={{
+            display: "block",
+            position: "relative",
+            zIndex: "30"
+            }}>
+            ${props.children}
+            </div>');
+    }
 }

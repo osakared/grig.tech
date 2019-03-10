@@ -1,8 +1,12 @@
 package;
 
-class Index extends coconut.ui.View
+import react.ReactMacro.jsx;
+
+class Index extends react.ReactComponent
 {
-    function render() '<div style={{
+    override function render()
+    {
+        return jsx('<div style={{
         color: "#333",
         fontFamily: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
         fontSize: "14px",
@@ -11,7 +15,7 @@ class Index extends coconut.ui.View
         margin: "0",
         padding: "0",
         }}>
-            <div style="outline:none;" tabIndex={-1}>
+            <div style={{outline: "none"}} tabIndex={-1}>
                 <Sidebar>
                     <SidebarTitle>Haxe Grig</SidebarTitle>
                     <Links>
@@ -25,7 +29,7 @@ class Index extends coconut.ui.View
                         <CodeBlock />
                         <SectionBlock>
                             <a href="https://gitter.im/haxe-grig/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank">
-                                <img src="https://badges.gitter.im/haxe-grig/Lobby.svg" data-origin="https://badges.gitter.im/haxe-grig/Lobby.svg" /> 
+                                <img src="https://badges.gitter.im/haxe-grig/Lobby.svg" data-origin="https://badges.gitter.im/haxe-grig/Lobby.svg" />
                             </a>
                             ${' '}
                             <img src="https://img.shields.io/badge/license-MIT-green.svg" />  
@@ -46,7 +50,7 @@ class Index extends coconut.ui.View
                                 environments, ranging from standalone compiled applications, to the browser, to plugins.
                             </p>
                             <p>See the <a href="api/" target="_blank">api documentation</a>.</p>
-                            <img src="grig-logo.png" style="float:right;" />
+                            <img src="grig-logo.png" style={{float: "right"}} />
                             <p>Hardware Capabilities:</p>
                             <table>
                                 <thead>
@@ -155,5 +159,6 @@ class Index extends coconut.ui.View
                     <CodeBox></CodeBox>
                 </Page>
             </div>
-        </div>';
+        </div>');
+    }
 }

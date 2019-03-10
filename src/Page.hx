@@ -1,18 +1,21 @@
 package;
 
-class Page extends coconut.ui.View
-{
-    @:attribute var children:coconut.ui.Children;
+import react.ReactMacro.jsx;
 
-    function render() '<div style={{
-        backgroundColor: "rgb(243, 247, 249)",
-        display: "block",
-        marginLeft: "230px",
-        minHeight: "100%",
-        paddingBottom: "1rem",
-        position: "relative",
-        zIndex: "10"
-        }}>
-        ${...children}
-    </div>';
+class Page extends react.ReactComponent
+{
+    override function render()
+    {
+        return jsx('<div style={{
+            backgroundColor: "rgb(243, 247, 249)",
+            display: "block",
+            marginLeft: "230px",
+            minHeight: "100%",
+            paddingBottom: "1rem",
+            position: "relative",
+            zIndex: "10"
+            }}>
+            ${props.children}
+            </div>');
+    }
 }

@@ -1,15 +1,18 @@
 package;
 
-class Links extends coconut.ui.View
-{
-    @:attribute var children:coconut.ui.Children;
+import react.ReactMacro.jsx;
 
-    function render() '<ul style={{
-        display: "block",
-        listStyle: "outside none none",
-        margin: "0px",
-        padding: "0px"
-        }}>
-      ${...children}
-    </ul>';
+class Links extends react.ReactComponent
+{
+    override function render()
+    {
+        return jsx('<ul style={{
+            display: "block",
+            listStyle: "outside none none",
+            margin: "0px",
+            padding: "0px"
+            }}>
+            ${props.children}
+            </ul>');
+    }
 }

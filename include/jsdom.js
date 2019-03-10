@@ -1,3 +1,4 @@
+const React = require('react');
 const JSDOM = require('jsdom').JSDOM;
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;

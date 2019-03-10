@@ -1,15 +1,18 @@
 package;
 
-class SectionBlock extends coconut.ui.View
-{
-    @:attribute var children:coconut.ui.Children;
+import react.ReactMacro.jsx;
 
-    function render() '<div style={{
-        display: "block",
-        boxSizing: "border-box",
-        padding: "0px 28px",
-        width: "50%"
-        }}>
-        ${...children}
-    </div>';
+class SectionBlock extends react.ReactComponent
+{
+    override function render()
+    {
+        return jsx('<div style={{
+            display: "block",
+            boxSizing: "border-box",
+            padding: "0px 28px",
+            width: "50%"
+            }}>
+            ${props.children}
+            </div>');
+    }
 }
