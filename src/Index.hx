@@ -4,8 +4,32 @@ import react.ReactMacro.jsx;
 
 class Index extends react.ReactComponent
 {
+
     override function render()
     {
+        var code = '
+<span style="color: #fa6cbc;">trace</span>(<span style="color: #7ee1f8;">MidiIn</span>.<span style="color: #7ee1f8;">getApis</span>());
+<span style="color: #fa6cbc;">var</span> <span style="color: #e6e7e1;">midiIn</span> <span style="color: #fa6cbc;">=</span> <span style="color: #fa6cbc;">new</span> <span style="color: #7ee1f8;">MidiIn</span>(<span style="color: #b588f8;">grig.midi.</span><span style="color: #7ee1f8;">Api</span><span style="color: #b588f8;">.</span><span style="color: #7ee1f8;">Unspecified</span>);
+<span style="color: #e6e7e1;">midiIn</span>.<span style="color: #7ee1f8;">setCallback</span>(<span style="color: #fa6cbc;">function</span> (<span style="color: #f3a75e;">midiMessage</span><span style="color: #fa6cbc;">:</span><span style="color: #7ee1f8;">MidiMessage</span>, <span style="color: #f3a75e;">delta</span><span style="color: #fa6cbc;">:</span><span style="color: #b588f8;">Float</span>) {
+    <span style="color: #fa6cbc;">trace</span>(<span style="color: #e6e7e1;">midiMessage</span>.<span style="color: #e6e7e1;">messageType</span>);
+    <span style="color: #fa6cbc;">trace</span>(<span style="color: #e6e7e1;">delta</span>);
+});
+<span style="color: #e6e7e1;">midiIn</span>.<span style="color: #7ee1f8;">getPorts</span>().<span style="color: #7ee1f8;">handle</span>(<span style="color: #fa6cbc;">function</span>(<span style="color: #f3a75e;">outcome</span>) {
+    <span style="color: #fa6cbc;">switch</span> <span style="color: #e6e7e1;">outcome</span> {
+        <span style="color: #fa6cbc;">case</span> <span style="color: #7ee1f8;">Success</span>(<span style="color: #e6e7e1;">ports</span>):
+            <span style="color: #fa6cbc;">trace</span>(<span style="color: #e6e7e1;">ports</span>);
+            <span style="color: #e6e7e1;">midiIn</span>.<span style="color: #7ee1f8;">openPort</span>(<span style="color: #b588f8;">0</span>, <span style="color: #dde77a;"><span style="color: #dde77a;">\'</span>grig.midi<span style="color: #dde77a;">\'</span></span>).<span style="color: #7ee1f8;">handle</span>(<span style="color: #fa6cbc;">function</span>(<span style="color: #f3a75e;">midiOutcome</span>) {
+                <span style="color: #fa6cbc;">switch</span> <span style="color: #e6e7e1;">midiOutcome</span> {
+                    <span style="color: #fa6cbc;">case</span> <span style="color: #7ee1f8;">Success</span>(<span style="color: #e6e7e1;">_</span>):
+                        <span style="color: #7ee1f8;">mainLoop</span>(<span style="color: #e6e7e1;">midiIn</span>);
+                    <span style="color: #fa6cbc;">case</span> <span style="color: #7ee1f8;">Failure</span>(<span style="color: #e6e7e1;">error</span>):
+                        <span style="color: #fa6cbc;">trace</span>(<span style="color: #e6e7e1;">error</span>);
+                }
+            });
+        <span style="color: #fa6cbc;">case</span> <span style="color: #7ee1f8;">Failure</span>(<span style="color: #e6e7e1;">error</span>):
+            <span style="color: #fa6cbc;">trace</span>(<span style="color: #e6e7e1;">error</span>);
+    }
+});';
         return jsx('<div style={{
         color: "#333",
         fontFamily: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
@@ -26,7 +50,7 @@ class Index extends react.ReactComponent
                 <Page>
                     <Main>
                         <Title id="introduction" title="Introduction" />
-                        <CodeBlock />
+                        <CodeBlock code=${code} />
                         <SectionBlock>
                             <a href="https://gitter.im/haxe-grig/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank">
                                 <img src="https://badges.gitter.im/haxe-grig/Lobby.svg" data-origin="https://badges.gitter.im/haxe-grig/Lobby.svg" />

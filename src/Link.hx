@@ -4,9 +4,6 @@ import react.ReactMacro.jsx;
 
 class Link extends react.ReactComponent
 {
-    @:attribute var href:String;
-    @:attribute var title:String;
-
     override function render()
     {
         return jsx('<li style={{
@@ -25,8 +22,8 @@ class Link extends react.ReactComponent
                 transitionProperty: "background",
                 transitionTimingFunction: "linear",
                 transitionDuration: "130ms"
-            }} href="${href}">
-            ${title}
+            }} href="${props.href}">
+            ${props.title}
             </a>
             </li>');
     }

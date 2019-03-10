@@ -36,8 +36,7 @@ class CodeBlock extends react.ReactComponent
                     backgroundColor: "rgb(30, 33, 35) !important",
                     boxSizing: "border-box",
                     display: "block"
-                }}>
-                ${props.children}
+                }} dangerouslySetInnerHTML={{__html: ${props.code}}}>
                 </pre>
             </div>');
     }
