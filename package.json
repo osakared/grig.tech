@@ -4,7 +4,7 @@
   "description": "Documentation for haxe grig",
   "main": "index.js",
   "scripts": {
-    "build": "npx lix download && npx haxe web.hxml"
+    "build": "./build.sh"
   },
   "author": "thomasjwebb",
   "license": "MIT",
