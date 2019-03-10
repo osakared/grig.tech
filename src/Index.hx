@@ -16,6 +16,7 @@ class Index extends coconut.ui.View
                     <SidebarTitle>Haxe Grig</SidebarTitle>
                     <Links>
                         <Link href="#introduction" title="Introduction" />
+                        <Link href="#installation" title="Installation" />
                     </Links>
                 </Sidebar>
                 <Page>
@@ -32,13 +33,20 @@ class Index extends coconut.ui.View
                                 <img src="https://img.shields.io/static/v1.svg?label=gitlab&message=clone&color=green" />
                             </a>
                             <p>
-                                Grig is a set of small audio packages for haxe (and by extension, the langauges haxe targets) to process and create music and audio.
+                                Grig is a set of small audio packages for <a href="https://haxe.org/">haxe</a> (and by extension, the langauges haxe targets)
+                                to process and create music and audio.
                                 Grig is designed to have as few dependencies and interdependencies as possible, so that you can use as much or as little of the
-                                functionality you need withing bringing in a heavy framework.
+                                features you need withing bringing in a heavy framework. Haxe\'s dead code elimination also ensures that unused
+                                functionality within a package isn\'t included in the final output.
+                            </p>
+                            <p>
+                                For non-hardware code, grig is designed to work on all haxe targets. Audio and MIDI IO externs are also provided for a number of
+                                different environments (see below). This means that it should be possible to run the same audio code on multiple different
+                                environments, ranging from standalone compiled applications, to the browser, to plugins.
                             </p>
                             <p>See the <a href="https://haxe-grig.gitlab.io/grig/api/" target="_blank">api documentation</a>.</p>
-                            <p>Hardware Capabilities:</p>
                             <img src="grig-logo.png" style="float:right;" />
+                            <p>Hardware Capabilities:</p>
                             <table>
                                 <thead>
                                 <tr>
@@ -119,6 +127,27 @@ class Index extends coconut.ui.View
                                 </tr>
                                 </tbody>
                             </table>
+                            <h2>grig.midi</h2>
+                            <ul>
+                                <li><a href="https://lib.haxe.org/p/grig.midi">Package on haxelib</a></li>
+                                <li><a href="https://gitlab.com/haxe-grig/grig.midi">Source on gitlab</a></li>
+                            </ul>
+                            <h2>grig.audio</h2>
+                            <ul>
+                                <li><a href="https://lib.haxe.org/p/grig.audio">Package on haxelib</a></li>
+                                <li><a href="https://gitlab.com/haxe-grig/grig.audio">Source on gitlab</a></li>
+                            </ul>
+                        </SectionBlock>
+                        <Title id="installation" title="Installation" />
+                        <SectionBlock>
+                            <p>
+                                I recommend <a href="https://github.com/lix-pm/lix.client">lix</a> as a way to manage haxe versions and packages. However
+                                grig packages can be installed using haxelib as well. Please note that due to the use of git submodules, installing directly
+                                from the repo isn\'t supported for cpp standalone on grig.audio and grig.midi.
+                                Instead, to use the latest version from git, clone the repo, then modify the appropriate files under haxe_modules to point to
+                                that directory as detailed in the lix documentation.
+                            </p>
+                            <p>Copyright © 2019 Osaka Red LLC, redistributable per the terms of the CC Attribution 4.0 license.</p>
                         </SectionBlock>
                     </Main>
                     <CodeBox></CodeBox>
