@@ -49,7 +49,7 @@ class Index extends react.ReactComponent
                 </Sidebar>
                 <Page>
                     <Main>
-                        <Title id="introduction" title="Introduction" />
+                        <Title id="introduction" title="Introduction 🧚🏼‍♂️" />
                         <CodeBlock code=${code} />
                         <SectionBlock>
                             <a href="https://gitter.im/haxe-grig/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" target="_blank">
