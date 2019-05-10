@@ -5,6 +5,7 @@
 -lib grig.midi
 -lib grig.pitch
 -lib grig.synth
+-lib format
 
 -xml bin/doc.xml
 
