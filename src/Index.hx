@@ -62,6 +62,9 @@ class Index extends react.ReactComponent
                                 <img src="https://img.shields.io/static/v1.svg?label=gitlab&message=clone&color=green" />
                             </a>
                             <p>
+                                Get your <a href="https://www.redbubble.com/i/t-shirt/Grig-Mascot-by-handfetisch/40620610.IZGJF">grig t-shirt</a>!
+                            </p>
+                            <p>
                                 Grig is a set of small audio packages for <a href="https://haxe.org/">haxe</a> (and by extension, the langauges haxe targets)
                                 to process and create music and audio.
                                 Grig is designed to have as few dependencies and interdependencies as possible, so that you can use as much or as little of the
