@@ -1,6 +1,6 @@
 {
-  "name": "grig.osakared.io",
-  "version": "1.0.0",
+  "name": "grig.tech",
+  "version": "1.0.1",
   "description": "Documentation for haxe grig",
   "main": "index.js",
   "scripts": {
