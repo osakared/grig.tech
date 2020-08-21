@@ -1,7 +1,7 @@
 -D doc-gen
 --macro include('grig', true, ['grig.audio.format.mp3.Reader'])
 --macro include('mpd')
-# --no-output
+--no-output
 -lib grig.audio
 -lib grig.midi
 -lib grig.pitch

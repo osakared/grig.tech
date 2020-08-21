@@ -10,9 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "jsdom": "^13.2.0",
-    "less": "^3.9.0",
+    "less": "^3.12.2",
     "lix": "^15.9.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
