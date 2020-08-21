@@ -180,7 +180,7 @@ class Index extends react.ReactComponent
                                 that directory as detailed in the lix documentation.
                             </p>
                             <pre>lix install haxelib:grig.midi</pre>
-                            <p>Copyright © 2019 Osaka Red LLC, redistributable per the terms of the CC Attribution 4.0 license.</p>
+                            <p>Copyright © 2019-2020 Osaka Red LLC, redistributable per the terms of the CC Attribution 4.0 license.</p>
                         </SectionBlock>
                     </Main>
                     <CodeBox></CodeBox>
