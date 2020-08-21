@@ -5,3 +5,4 @@ haxe_libraries/grig.audio.hxml
 haxe_libraries/grig.midi.hxml
 haxe_libraries/grig.pitch.hxml
 haxe_libraries/grig.synth.hxml
+haxe_libraries/musicpd.hxml
