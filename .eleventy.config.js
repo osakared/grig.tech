@@ -1,29 +1,29 @@
-// const htmlmin = require("html-minifier")
+const htmlmin = require("html-minifier")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = eleventyConfig => {
 
     eleventyConfig.addPlugin(syntaxHighlight);
-    
+
     // // Add a readable date formatter filter to Nunjucks
     // eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))
 
     // // Add a HTML timestamp formatter filter to Nunjucks
     // eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
-    // // Minify our HTML
-    // eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
-    //     if ( outputPath.endsWith(".html") )
-    //     {
-    //         let minified = htmlmin.minify(content, {
-    //             useShortDoctype: true,
-    //             removeComments: true,
-    //             collapseWhitespace: true
-    //         })
-    //         return minified
-    //     }
-    //     return content
-    // })
+    // Minify our HTML
+    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+        if ( outputPath.endsWith(".html") )
+        {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            })
+            return minified
+        }
+        return content
+    })
 
     // // Collections
     // eleventyConfig.addCollection('blog', collection => {

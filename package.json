@@ -12,6 +12,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "html-minifier": "^4.0.0",
     "laravel-mix": "^5.0.5",
     "laravel-mix-purgecss": "^5.0.0",
     "lix": "^15.9.0",
