@@ -1,7 +1,5 @@
 -lib react
--lib hxnodejs
 -cp src
 -main Render
 -D react_global
--js bin/web.js
--cmd node bin/web.js
+-js dist/js/demos.js
