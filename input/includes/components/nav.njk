@@ -1,0 +1,22 @@
+<nav id="nav" class="nav hidden md:flex">
+
+    <ul class="menu flex flex-col md:flex-row items-center list-reset text-base">
+
+        {% for item in navigation.main %}
+
+        <li class="level-1 mb-4 md:mr-4 md:mb-0">
+
+            <a href="{{ item.url | safe }}" class="link font-bold text-white hover:text-blue-400 active:text-blue-400 {% if page.url == item.url %}active text-blue-400{% endif %}
+            "{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+
+        </li>
+
+        {% endfor %}
+
+        <li>
+            <a class="inline-block rounded md:ml-2 py-3 px-6 text-white font-bold bg-blue-400 hover:bg-white hover:text-blue-400" href="https://gitlab.com/haxe-grig" rel="noopener">git repo</a>
+        </li>
+
+    </ul>
+
+</nav>

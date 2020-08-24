@@ -4,15 +4,20 @@
   "description": "Documentation for haxe grig",
   "main": "index.js",
   "scripts": {
+    "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=.eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build": "./build.sh"
   },
   "author": "thomasjwebb",
   "license": "MIT",
-  "dependencies": {
-    "jsdom": "^13.2.0",
-    "less": "^3.12.2",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "laravel-mix": "^5.0.5",
+    "laravel-mix-purgecss": "^5.0.0",
     "lix": "^15.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.7.3",
+    "vue-template-compiler": "^2.6.12"
   }
 }

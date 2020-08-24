@@ -3,6 +3,5 @@
 -cp src
 -main Render
 -D react_global
---macro includeFile('include/jsdom.js')
 -js bin/web.js
 -cmd node bin/web.js

@@ -1,0 +1,57 @@
+
+//==========  Imports  ==========//
+
+// Import Tailwind preflight
+@tailwind base;
+
+
+// Import our custom base styles
+@import 'base/all';
+
+
+// Import Tailwind components
+@tailwind components;
+
+
+// Import our custom component styles
+@import 'components/all';
+
+
+// Import Tailwind utilities
+// TailwindCSS recommends leaving utilities till last to ensure they aren't overwritten.
+@tailwind utilities;
+
+img {
+    display: inline;
+}
+
+a {
+    color: #77ABD3;
+}
+
+a:not([class]) {
+    border-color: #77ABD3;
+}
+
+a:not([class]):hover {
+    color: #97CBF3;
+}
+
+.normal h1, .normal h2, .normal h3 {
+    color: inherit;
+}
+
+.normal ul, .normal ol {
+    list-style: revert;
+    // padding-left: 10px;
+    margin: revert;
+    padding: revert;
+}
+
+pre, pre[class*="language-"] {
+    margin: revert;
+}
+
+.normal p {
+    margin: revert;
+}

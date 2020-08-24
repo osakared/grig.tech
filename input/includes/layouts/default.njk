@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" class="min-h-full antialiased">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}</title>
+    <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
+    {% if page.fileSlug === 'blog' %}
+        <meta name="robots" content="noindex,follow" />
+    {% else %}
+        <meta name="robots" content="index,follow" />
+    {% endif %}
+
+    {# if your site's entire CSS comes in under 14kb, you may want to inline in the head #}
+    {# include main.css if in development mode #}
+    {% if helpers.environment === "development" %}
+        <link rel="stylesheet" href="/css/main.css">
+    {% else %}
+        {# else, use the minified css file for production #}
+        <link rel="stylesheet" href="/css/main.min.css">
+    {% endif %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-twilight.min.css" integrity="sha512-RoWdT48DZEoli0nuGe6LTHpn8Av/uhipLURvRQ4DlzT+AbeEC0JAk1cIp3g0UAdeVczF93OKnuCk4UKJ1eZ3mQ==" crossorigin="anonymous" />
+
+    {# include scripts #}
+    {% if helpers.environment === "development" %}
+        <script src="/js/main.js" defer></script>
+    {% else %}
+        <script src="/js/main.min.js" defer></script>
+    {% endif %}
+
+    {# include social meta tags #}
+    {# {% include "components/social-meta.njk" %} #}
+
+    {# lastly include favicon, fonts, etc #}
+    <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+
+    {# canonical #}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+</head>
+
+<body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-gray-200 bg-gray-900 leading-normal text-lg">
+
+    <a class="sr-only" href="#main">Skip to content</a>
+
+    <div id="wrapper" class="wrapper pb-16 md:pb-0 flex flex-col relative min-h-screen">
+
+        {# include header #}
+        {% include "components/header.njk" %}
+
+
+        <main id="main" class="main inner flex flex-1 flex-col py-10 lg:py-20 focus:outline-none normal" tabindex="-1">
+
+            <section id="container-centre" class="column centre flex-1" aria-label="Summary and features">
+
+                <h1 class="page-title">{{ title }}</h1>
+
+                <div class="content">
+
+                    {# include content #}
+                    {{ content | safe }}
+
+                </div>
+
+            </section>
+
+        </main>
+
+        {# include footer #}
+        {% include "components/footer.njk" %}
+
+    </div>
+
+    {# include mobile nav #}
+    {% include "components/mobile-nav.njk" %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js" integrity="sha512-hqRrGU7ys5tkcqxx5FIZTBb7PkO2o3mU6U5+qB9b55kgMlBUT4J2wPwQfMCxeJW1fC8pBxuatxoH//z0FInhrA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha512-ROhjG07IRaPZsryG77+MVyx3ZT5q3sGEGENoGItwc9xgvx+dl+s3D8Ob1zPdbl/iKklMKp7uFemLJFDRw0bvig==" crossorigin="anonymous"></script>
+
+</body>
+</html>
