@@ -13,6 +13,10 @@
             "url": "/tutorial/"
         },
         {
+            "label": "Demo",
+            "url": "/demo/"
+        },
+        {
             "label": "Chat",
             "url": "https://gitter.im/haxe-grig/Lobby?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"
         }

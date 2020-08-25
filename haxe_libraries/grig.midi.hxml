@@ -1,4 +1,4 @@
-# @install: lix --silent download "https://gitlab.com/api/v4/projects/haxe-grig%2Fgrig.midi/repository/archive.zip?sha=bd28c3101aa341d25c8259ef9641bd656b7e2aa4&" into grig.midi/0.0.3/gitlab/bd28c3101aa341d25c8259ef9641bd656b7e2aa4
+# @install: lix --silent download "https://gitlab.com/api/v4/projects/haxe-grig%2Fgrig.midi/repository/archive.zip?sha=1e3d5dbfe194e12574bca80e1cacec41f91addd0&" into grig.midi/0.0.3/gitlab/1e3d5dbfe194e12574bca80e1cacec41f91addd0
 -lib tink_core
--cp ${HAXE_LIBCACHE}/grig.midi/0.0.3/gitlab/bd28c3101aa341d25c8259ef9641bd656b7e2aa4/src
+-cp ${HAXE_LIBCACHE}/grig.midi/0.0.3/gitlab/1e3d5dbfe194e12574bca80e1cacec41f91addd0/src
 -D grig.midi=0.0.3

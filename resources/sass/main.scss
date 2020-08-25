@@ -48,10 +48,22 @@ a:not([class]):hover {
     padding: revert;
 }
 
+.normal button {
+    margin: revert;
+    padding: revert;
+    border: revert;
+    -webkit-appearance: button;
+    border-width: 1px;
+}
+
 pre, pre[class*="language-"] {
     margin: revert;
 }
 
 .normal p {
     margin: revert;
+}
+
+select {
+    background-color: #555555;
 }

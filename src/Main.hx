@@ -1,17 +1,12 @@
 package;
 
+import react.ReactDOM;
 import react.ReactMacro.jsx;
 
-class Main extends react.ReactComponent
+class Main
 {
-    override function render()
+    public static function main()
     {
-        return jsx('<div style={{
-            display: "block",
-            position: "relative",
-            zIndex: "30"
-            }}>
-            ${props.children}
-            </div>');
+        return ReactDOM.render(jsx('<$Demo/>'), js.Browser.document.getElementById('app'));
     }
 }

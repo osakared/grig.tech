@@ -1,5 +1,8 @@
--lib react
+-lib react-next
+-lib grig.midi
+-lib grig.pitch
 -cp src
--main Render
+-main Main
 -D react_global
--js dist/js/demos.js
+--dce full
+-js dist/js/demo.js
