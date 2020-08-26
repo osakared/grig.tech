@@ -22,7 +22,7 @@ For non-hardware code, grig is designed to work on all haxe targets. Audio and M
 This means that it should be possible to run the same audio code on multiple different environments, ranging from standalone compiled applications, to the browser,
 to plugins.
 
-See the [api documentation](/api/) and also the [tutorials](/tutorial/).
+See the [api documentation](/api/) and also the [tutorials](/tutorials/).
 
 ## Hardware Capabilities
 
