@@ -10,7 +10,11 @@ typedef MidiState = {
     var ?selectedPort:String;
 }
 
-class Midi extends ReactComponentOfState<MidiState>
+typedef MidiProps = {
+    var midiCallback:(MidiMessage, Float)->Void;
+}
+
+class Midi extends ReactComponentOf<MidiProps, MidiState>
 {
     var midiIn:MidiIn = null;
 
@@ -20,7 +24,7 @@ class Midi extends ReactComponentOfState<MidiState>
 
         midiIn = new MidiIn(grig.midi.Api.Unspecified);
         midiIn.setCallback(onMidi);
-        state = { status: 'not connected', ports: [], pitches: [] };
+        state = { status: 'Not connected', ports: [], pitches: [] };
     }
 
     override public function render():ReactElement
@@ -28,7 +32,7 @@ class Midi extends ReactComponentOfState<MidiState>
         return jsx('<>
                         <>
                             <$Button label="Query webmidi ports" action=$getPorts />
-                            <span style={{color: "#ff9999", paddingLeft: "5px"}}>${this.state.status}</span>
+                            <span style={{paddingRight: "5px", paddingLeft: "5px"}}>${this.state.status}</span>
                             <$Selector options=${this.state.ports} action=$changePort visible=${isProbablyConnected()} />
                             <span style={{paddingLeft: "5px"}}><$Button label="Connect" visible=${isProbablyConnected()} action=$connectToPort /></span>
                         </>
@@ -51,13 +55,13 @@ class Midi extends ReactComponentOfState<MidiState>
     {
         var portNumber:Int = this.state.ports.indexOf(this.state.selectedPort);
         if (portNumber < 0) {
-            setState({status: 'invalid port', ports: [], pitches: []});
+            setState({status: 'Invalid port', ports: [], pitches: []});
             return;
         }
         midiIn.openPort(portNumber, 'grig.midi').handle(function(midiOutcome) {
             switch midiOutcome {
                 case Success(_):
-                    trace('woohoo!');
+                    setState({status: 'Connected', ports: this.state.ports, pitches: []});
                 case Failure(error):
                     setState({status: error.toString(), ports: [], pitches: []});
             }
@@ -69,13 +73,14 @@ class Midi extends ReactComponentOfState<MidiState>
         if (midiMessage.messageType == NoteOn) {
             var pitches = this.state.pitches.copy();
             pitches.push(midiMessage.byte2);
-            setState({status: '', ports: this.state.ports, selectedPort: this.state.selectedPort, pitches: pitches});
+            setState({status: this.state.status, ports: this.state.ports, selectedPort: this.state.selectedPort, pitches: pitches});
         }
         else if (midiMessage.messageType == NoteOff) {
             var pitches = this.state.pitches.copy();
             pitches.remove(midiMessage.byte2);
-            setState({status: '', ports: this.state.ports, selectedPort: this.state.selectedPort, pitches: pitches});
+            setState({status: this.state.status, ports: this.state.ports, selectedPort: this.state.selectedPort, pitches: pitches});
         }
+        this.props.midiCallback(midiMessage, delta);
     };
 
     private function getPorts():Void
@@ -83,8 +88,7 @@ class Midi extends ReactComponentOfState<MidiState>
         this.midiIn.getPorts().handle(function(outcome) {
             switch outcome {
                 case Success(ports):
-                    trace(ports);
-                    setState({status: '', ports: ports, selectedPort: ports[0], pitches: [] });
+                    setState({status: this.state.status, ports: ports, selectedPort: ports[0], pitches: [] });
                 case Failure(error):
                     setState({status: error.toString(), ports: [], pitches: []});
             }

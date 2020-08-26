@@ -1,4 +1,5 @@
 -lib react-next
+-lib grig.audio
 -lib grig.midi
 -lib grig.pitch
 -cp src

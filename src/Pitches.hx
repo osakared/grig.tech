@@ -10,7 +10,7 @@ class Pitches extends ReactComponentOfProps<PitchesProps>
 { 
     override public function render():ReactElement
     {
-        return jsx('<div style={{backgroundColor: "#2A303C", width: "100%;", margin: "5px 5px 5px 5px"}}> : ${renderPitches()}</div>');
+        return jsx('<div style={{backgroundColor: "#2A303C", width: "100%", margin: "5px 5px 5px 5px"}}> : ${renderPitches()}</div>');
     }
 
     private function renderPitches()
