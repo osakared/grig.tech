@@ -405,7 +405,6 @@ table.params {
 }
 
 table.params th {
-    background: #fcfcfc;
 }
 
 .doc-main {
@@ -534,7 +533,6 @@ pre.example:before {
 .inherited-fields {
     padding: 5px 20px;
     margin-top: 1em;
-    background: #fcfcfc;
 }
 
 @media (max-width: 767px) {

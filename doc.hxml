@@ -6,6 +6,7 @@
 -lib grig.midi
 -lib grig.pitch
 -lib grig.synth
+-lib grig.osc
 -lib musicpd
 -lib format
 
