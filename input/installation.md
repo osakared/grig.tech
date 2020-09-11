@@ -12,6 +12,7 @@ The [grig project](https://gitlab.com/haxe-grig) is made up of the following rep
 
 - grig.audio ([gitlab](https://gitlab.com/haxe-grig/grig.audio)) ([github mirror](https://github.com/osakared/grig.audio)) ([haxelib](https://lib.haxe.org/p/grig.audio/))
 - grig.midi ([gitlab](https://gitlab.com/haxe-grig/grig.midi)) ([github mirror](https://github.com/osakared/grig.midi)) ([haxelib](https://lib.haxe.org/p/grig.midi/))
+- grig.osc ([gitlab](https://gitlab.com/haxe-grig/grig.osc)) ([github mirror](https://github.com/osakared/grig.osc)) ([haxelib](https://lib.haxe.org/p/grig.osc))
 - grig.synth ([gitlab](https://gitlab.com/haxe-grig/grig.synth)) ([github mirror](https://github.com/osakared/grig.synth))
 - grig.pitch ([gitlab](https://gitlab.com/haxe-grig/grig.pitch)) ([github mirror](https://github.com/osakared/grig.pitch)) ([haxelib](https://lib.haxe.org/p/grig.pitch/))
 - haxe-musicpd ([gitlab](https://gitlab.com/haxe-grig/haxe-musicpd)) ([github mirror](https://github.com/osakared/haxe-musicpd)) ([haxelib](https://lib.haxe.org/p/musicpd/))
@@ -35,6 +36,6 @@ haxelib install grig.audio
 ```
 
 Please note that due to the use of git submodules, installing directly
-from the repo isn't supported for cpp standalone on grig.audio and grig.midi.
+from the repo isn't supported for cpp standalone on `grig.audio` and `grig.midi`.
 Instead, to use the latest version from git, clone the repo, then modify the appropriate files under `haxe_modules` to point to
 that directory as detailed in the lix documentation.
