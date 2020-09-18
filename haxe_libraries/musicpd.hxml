@@ -1,4 +1,4 @@
-# @install: lix --silent download "https://gitlab.com/api/v4/projects/haxe-grig%2Fhaxe-musicpd/repository/archive.zip?sha=2852db1cb89f2ba56d91e7eb6c132ae6cb3c2c68&" into musicpd/0.0.2/gitlab/2852db1cb89f2ba56d91e7eb6c132ae6cb3c2c68
+# @install: lix --silent download "https://gitlab.com/api/v4/projects/haxe-grig%2Fhaxe-musicpd/repository/archive.zip?sha=77f019f99571eac82f1a2ba0eef3e28c60f07dc2&" into musicpd/0.0.2/gitlab/77f019f99571eac82f1a2ba0eef3e28c60f07dc2
 -lib tink_core
--cp ${HAXE_LIBCACHE}/musicpd/0.0.2/gitlab/2852db1cb89f2ba56d91e7eb6c132ae6cb3c2c68/src
+-cp ${HAXE_LIBCACHE}/musicpd/0.0.2/gitlab/77f019f99571eac82f1a2ba0eef3e28c60f07dc2/src
 -D musicpd=0.0.2

@@ -1,5 +1,5 @@
 -D doc-gen
---macro include('grig', true, ['grig.audio.format.mp3.Reader'])
+--macro include('grig')
 --macro include('mpd')
 --no-output
 -lib grig.audio
@@ -12,17 +12,21 @@
 
 -xml bin/doc.xml
 
-# --each
+#--each
 
-# --next
-# -xml bin/js.xml
-# -js dummy.js
+#--next
+#-xml bin/js.xml
+#-js dummy.js
 
-# --next
-# -xml bin/nodejs.xml
-# -lib hxnodejs
-# -js dummy.js
+#--next
+#-xml bin/nodejs.xml
+#-lib hxnodejs
+#-js dummy.js
 
-# --next
-# -xml bin/python.xml
-# -python dummy.py
+#--next
+#-xml bin/python.xml
+#-python dummy.py
+
+#--next
+#-xml bin/cpp.xml
+#-cpp dummy
