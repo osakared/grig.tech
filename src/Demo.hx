@@ -19,7 +19,7 @@ class Demo extends ReactComponent
                         <$Audio audioCallback=$audioCallback />
                         <$NoteButton midiCallback=$midiCallback />
                         <$Slider action=${synth.setRatio} label="OSC2 Ratio" min={0.25} max={24} step={0.25} val={12} />
-                        <$Slider action=${synth.setModulationDepth} label="OSC2->OSC1 Modulation Depth" min={0} max={400} step={0.1} val={200} />
+                        <$Slider action=${synth.setModulationDepth} label="OSC2->OSC1 Modulation Depth" min={0} max={1000} step={0.1} val={200} />
                     </>');
     }
 

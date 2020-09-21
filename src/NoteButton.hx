@@ -1,4 +1,5 @@
 import grig.midi.MidiMessage;
+import haxe.io.Bytes;
 import react.ReactComponent;
 import react.ReactMacro.jsx;
 
@@ -27,11 +28,11 @@ class NoteButton extends ReactComponentOf<NoteButtonProps, NoteButtonState>
     private function startOrStop():Void
     {
         if (!this.state.playing) {
-            this.props.midiCallback(new MidiMessage(9511949), 0.0);
+            this.props.midiCallback(new MidiMessage(Bytes.ofHex('90287F')), 0.0);
             this.setState({label: 'Stop Note', playing: true});
         }
         else {
-            this.props.midiCallback(new MidiMessage(8463360), 0.0);
+            this.props.midiCallback(new MidiMessage(Bytes.ofHex('802800')), 0.0);
             this.setState({label: 'Start Note', playing: false});
         }
     }

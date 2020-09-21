@@ -104,6 +104,11 @@ See the [api documentation](/api/) and also the [tutorials](/tutorials/).
     <td>N/A</td>
     <td>✅</td>
     </tr>
+    <tr>
+    <td>kha</td>
+    <td>N/A</td>
+    <td></td>
+    </tr>
     </tbody>
 </table>
 

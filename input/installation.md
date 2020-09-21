@@ -36,6 +36,6 @@ haxelib install grig.audio
 ```
 
 Please note that due to the use of git submodules, installing directly
-from the repo isn't supported for cpp standalone on `grig.audio` and `grig.midi`.
+from the repo isn't supported for cpp standalone on `grig.audio`.
 Instead, to use the latest version from git, clone the repo, then modify the appropriate files under `haxe_modules` to point to
 that directory as detailed in the lix documentation.
