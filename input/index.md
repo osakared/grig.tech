@@ -69,7 +69,7 @@ Using `grig.audio` and `grig.midi` in haxe:
         </tr>
         <tr>
             <td>java</td>
-            <td></td>
+            <td>✅</td>
             <td></td>
         </tr>
         <tr>
