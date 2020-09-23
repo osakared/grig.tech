@@ -26,90 +26,85 @@ See the [api documentation](/api/) and also the [tutorials](/tutorials/).
 
 ## Hardware Capabilities
 
+Using `grig.audio` and `grig.midi` in haxe:
+
 <table style="width: 400px">
     <thead>
-    <tr>
-    <th>Environment</th>
-    <th>Midi IO 🎹</th>
-    <th>Audio IO 🎧</th>
-    </tr>
+        <tr>
+            <th>Environment</th>
+            <th>Midi IO 🎹</th>
+            <th>Audio IO 🎧</th>
+        </tr>
     </thead>
-    <tbody><tr>
-    <td>c++</td>
-    <td>✅</td>
-    <td>✅</td>
-    </tr>
-    <tr>
-    <td>hashlink</td>
-    <td>(rtmidi)</td>
-    <td>(portaudio)</td>
-    </tr>
-    <tr>
-    <td>c++/vst</td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>c++/au</td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>c++/lv2</td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>c++/fmod</td>
-    <td>N/A</td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>js/html5</td>
-    <td>✅</td>
-    <td>✅</td>
-    </tr>
-    <tr>
-    <td>js/nodejs</td>
-    <td>✅</td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>java</td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>c#</td>
-    <td>(<a href="https://github.com/atsushieno/managed-midi" target="_blank">managed midi</a>)</td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>c#/fmod</td>
-    <td>N/A</td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>lua</td>
-    <td>(<a href="https://github.com/luaforge/luamidi" target="_blank">luamidi</a>)</td>
-    <td></td>
-    </tr>
-    <tr>
-    <td>python</td>
-    <td>✅</td>
-    <td>✅</td>
-    </tr>
-    <tr>
-    <td>heaps</td>
-    <td>N/A</td>
-    <td>✅</td>
-    </tr>
-    <tr>
-    <td>kha</td>
-    <td>N/A</td>
-    <td></td>
-    </tr>
+    <tbody>
+        <tr>
+            <td>c++</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>hashlink</td>
+            <td>(rtmidi)</td>
+            <td>(portaudio)</td>
+        </tr>
+        <tr>
+            <td>c++/fmod</td>
+            <td>N/A</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>js/html5</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>js/nodejs</td>
+            <td>✅</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>js/fmod</td>
+            <td>N/A</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>java</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>c#</td>
+            <td>✅</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>c#/fmod</td>
+            <td>N/A</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>lua</td>
+            <td>(<a href="https://github.com/luaforge/luamidi" target="_blank">luamidi</a>)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>python</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>heaps</td>
+            <td>N/A</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>kha</td>
+            <td>N/A</td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
+
+Additional platforms will be supported [via hxal](https://gitlab.com/haxe-grig/grig.hxal):
 
 Get your [grig t-shirt](https://www.redbubble.com/i/t-shirt/Grig-Mascot-by-handfetisch/40620610.IZGJF)! Or [sponsor grig development](https://github.com/sponsors/thomasjwebb).
