@@ -1,3 +1,3 @@
-# @install: lix --silent download "https://gitlab.com/api/v4/projects/haxe-grig%2Fgrig.pitch/repository/archive.zip?sha=0be21fc12a7b9bf392dffe87ca5510fe166673c7&" into grig.pitch/0.0.1/gitlab/0be21fc12a7b9bf392dffe87ca5510fe166673c7
--cp ${HAXE_LIBCACHE}/grig.pitch/0.0.1/gitlab/0be21fc12a7b9bf392dffe87ca5510fe166673c7/src
--D grig.pitch=0.0.1
+# @install: lix --silent download "haxelib:/grig.pitch#0.0.2" into grig.pitch/0.0.2/haxelib
+-cp ${HAXE_LIBCACHE}/grig.pitch/0.0.2/haxelib/src
+-D grig.pitch=0.0.2
