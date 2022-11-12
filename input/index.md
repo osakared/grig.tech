@@ -107,4 +107,4 @@ Using `grig.audio` and `grig.midi` in haxe:
 
 Additional platforms will be supported [via hxal](https://gitlab.com/haxe-grig/grig.hxal):
 
-Get your [grig t-shirt](https://www.redbubble.com/i/t-shirt/Grig-Mascot-by-handfetisch/40620610.IZGJF)! Or [sponsor grig development](https://github.com/sponsors/thomasjwebb).
+Get your [grig t-shirt](https://www.redbubble.com/i/t-shirt/Grig-Mascot-by-handfetisch/40620610.IZGJF)! Or [sponsor grig development](https://github.com/sponsors/thomasjwebb). Also <a rel="me" href="https://fosstodon.org/@grig">follow us</a> on Mastodon!
