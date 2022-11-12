@@ -1,4 +1,4 @@
-import grig.pitch.Note;
+import grig.pitch.Pitch;
 import react.ReactComponent;
 import react.ReactMacro.jsx;
 
@@ -16,8 +16,8 @@ class Pitches extends ReactComponentOfProps<PitchesProps>
     private function renderPitches()
     {
         return [for (pitch in this.props.pitches) {
-            var note = Note.fromMidiNote(pitch);
-            jsx('<span style={{color: "#499", paddingRight: "10px", width: "60px"}}>${note.key.toString()}${note.octave}</span>');
+            var note = Pitch.fromMidiNote(pitch);
+            jsx('<span style={{color: "#499", paddingRight: "10px", width: "60px"}}>${note.note.toString()}${note.octave}</span>');
         }];
     }
 }

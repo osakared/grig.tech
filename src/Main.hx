@@ -7,6 +7,6 @@ class Main
 {
     public static function main()
     {
-        return ReactDOM.render(jsx('<$Demo/>'), js.Browser.document.getElementById('app'));
+        ReactDOM.render(jsx('<$Demo/>'), js.Browser.document.getElementById('app'));
     }
 }
