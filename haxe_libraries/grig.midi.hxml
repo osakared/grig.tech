@@ -1,6 +1,6 @@
-# @install: lix --silent download "haxelib:/grig.midi#0.0.10" into grig.midi/0.0.10/haxelib
+# @install: lix --silent download "https://gitlab.com/api/v4/projects/haxe-grig%2Fgrig.midi/repository/archive.zip?sha=ca53d1bdde5a6667024bfca8219914bbce4739d3&" into grig.midi/0.0.10/gitlab/ca53d1bdde5a6667024bfca8219914bbce4739d3
 -lib grig.pitch
 -lib thx.core
 -lib tink_core
--cp ${HAXE_LIBCACHE}/grig.midi/0.0.10/haxelib/src
+-cp ${HAXE_LIBCACHE}/grig.midi/0.0.10/gitlab/ca53d1bdde5a6667024bfca8219914bbce4739d3/src
 -D grig.midi=0.0.10

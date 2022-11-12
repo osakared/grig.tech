@@ -1,3 +1,3 @@
-# @install: lix --silent download "haxelib:/html-entities#1.0.0" into html-entities/1.0.0/haxelib
--cp ${HAXE_LIBCACHE}/html-entities/1.0.0/haxelib/src
+# @install: lix --silent download "gh://github.com/back2dos/html-entities#8f0e5a0e87d4a62e82c7ea537bdd72ddc87d4055" into html-entities/1.0.0/github/8f0e5a0e87d4a62e82c7ea537bdd72ddc87d4055
+-cp ${HAXE_LIBCACHE}/html-entities/1.0.0/github/8f0e5a0e87d4a62e82c7ea537bdd72ddc87d4055/src
 -D html-entities=1.0.0
