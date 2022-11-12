@@ -1,0 +1,3 @@
+# @install: lix --silent download "gh://github.com/filt3rek/hscript-template#f90813619431e0fdd8a0e28a8ddaa59162d05d42" into hscript-template/0.0.0/github/f90813619431e0fdd8a0e28a8ddaa59162d05d42
+-cp ${HAXE_LIBCACHE}/hscript-template/0.0.0/github/f90813619431e0fdd8a0e28a8ddaa59162d05d42/
+-D hscript-template=0.0.0
