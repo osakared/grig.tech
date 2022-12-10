@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=.eleventy.config.js --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build": "./build.sh"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider ./build.sh",
+    "deploy": "./deploy.sh"
   },
   "author": "thomasjwebb",
   "license": "MIT",
